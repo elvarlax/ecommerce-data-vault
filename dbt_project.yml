@@ -1,0 +1,31 @@
+name: 'ecommerce_data_vault'
+version: '1.0.0'
+
+profile: 'ecommerce_data_vault'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+# Configuring models
+models:
+  ecommerce_data_vault:
+    staging:
+      +materialized: table
+    hubs:
+      +materialized: table
+    links:
+      +materialized: table
+    satellites:
+      +materialized: table
+    dimensions:
+      +materialized: table
+    facts:
+      +materialized: table

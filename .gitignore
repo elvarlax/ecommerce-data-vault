@@ -1,0 +1,27 @@
+# dbt
+logs/
+target/
+dbt_modules/
+*.log
+profiles.yml
+.user.yml
+
+# Python
+*.pyc
+*.pyo
+__pycache__/
+
+# MacOS
+.DS_Store
+
+# Linux
+*~
+
+# IDEs
+.vscode/
+.idea/
+
+# Other
+*.csv
+*.json
+*.sqlite

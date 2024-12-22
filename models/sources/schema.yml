@@ -1,0 +1,63 @@
+version: 2
+
+sources:
+  - name: ecommerce
+    database: ecommerce
+    schema: public
+
+    tables:
+      - name: aisles
+        description: "Contains aisle data"
+        columns:
+          - name: aisle_id
+            description: "Primary key of aisle"
+          - name: aisle
+            description: "Aisle name"
+
+      - name: departments
+        description: "Contains department data"
+        columns:
+          - name: department_id
+            description: "Primary key of department"
+          - name: department
+            description: "Department name"
+
+      - name: products
+        description: "Contains product data, including references to aisle and department"
+        columns:
+          - name: product_id
+            description: "Primary key of product"
+          - name: aisle_id
+            description: "Foreign key reference to aisles table"
+          - name: department_id
+            description: "Foreign key reference to departments table"
+          - name: product_name
+            description: "Product name"
+
+      - name: orders
+        description: "Contains customer order data"
+        columns:
+          - name: order_id
+            description: "Primary key of order"
+          - name: user_id
+            description: "User ID who placed the order"
+          - name: order_number
+            description: "Order number for the user"
+          - name: order_dow
+            description: "Day of the week the order was placed"
+          - name: order_hour_of_day
+            description: "Hour of day the order was placed"
+          - name: days_since_prior_order
+            description: "Days since prior order"
+
+      - name: order_products
+        description: "Contains details of products in each order"
+        columns:
+          - name: order_id
+            description: "Foreign key reference to orders table"
+          - name: product_id
+            description: "Foreign key reference to products table"
+          - name: add_to_cart_order
+            description: "Order in which the product was added to cart"
+          - name: reordered
+            description: "Indicates if product is reordered (1) or new (0)"
