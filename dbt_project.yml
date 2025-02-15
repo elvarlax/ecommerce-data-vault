@@ -17,15 +17,19 @@ clean-targets:
 # Configuring models
 models:
   ecommerce_data_vault:
-    staging:
+    stg:
       +materialized: table
-    hubs:
+    hub:
       +materialized: table
-    links:
+    link:
       +materialized: table
-    satellites:
+    sat:
       +materialized: table
-    dimensions:
+    pit:
       +materialized: table
-    facts:
+    brg:
+      +materialized: table
+    dim:
+      +materialized: table
+    fact:
       +materialized: table
