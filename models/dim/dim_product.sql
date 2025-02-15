@@ -3,7 +3,7 @@ WITH source AS (
         p.product_id,
         s.product_name,
         s.hub_department_id,
-        d.department_id,  
+        d.department_id,
         d.department,
         a.aisle_id,
         a.aisle,
@@ -14,7 +14,7 @@ WITH source AS (
     LEFT JOIN {{ ref('sat_aisle') }} a ON s.hub_aisle_id = a.hub_aisle_id
 )
 SELECT
-    {{ sha256("product_id::text") }} AS dim_product_id,  
+    {{ sha256("product_id::text") }} AS dim_product_id,
     product_id,
     product_name,
     aisle_id,
