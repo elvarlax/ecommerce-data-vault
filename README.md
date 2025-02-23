@@ -105,7 +105,7 @@ The data is sourced from the **ecommerce** schema, which includes:
 
 1. Clone this repository:
    ```sh
-   git clone https://github.com/your-repo/ecommerce-data-vault.git
+   git clone https://github.com/elvarlax/ecommerce-data-vault
    cd ecommerce-data-vault
    ```
 2. Set up a PostgreSQL database environment.
