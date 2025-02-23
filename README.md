@@ -51,8 +51,8 @@ Satellites store attributes and historical changes for business entities:
 
 - **sat_aisle**: Historical changes for aisle attributes.
 - **sat_department**: Historical changes for department attributes.
-- **sat_order**: Tracks historical order data over time (**Full Refresh Strategy**).
-- **sat_order_product**: Tracks order-product interactions, including reorder status (**Full Refresh Strategy**).
+- **sat_order**: Tracks historical order data over time.
+- **sat_order_product**: Tracks order-product interactions, including reorder status.
 - **sat_product**: Stores product information.
 - **sat_user**: Tracks user-related changes.
 
